@@ -1,0 +1,115 @@
+<html>
+        <head>
+            <title>Student Details Management Portal</title>
+            <meta charset="UTF-8">
+    
+             <!-- Google Font Library-->
+             <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+                    
+            <!-- Bootstrap Libraries -->
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>       
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+            <!-- Link to the css file -->
+            <link rel="stylesheet" href="css.css">
+        </head>
+        <body>
+            <!-- Main Heading -->
+            <div class="page-header">
+                <center><h1>STUDENT DETAILS MANAGEMENT PORTAL</h1></center>
+            </div>
+    
+            <!-- Data Entry Form -->
+            <div id="spoilerup" class="container">
+                <form action="javascript:void(0);" class="form-horizontal" method="POST" onsubmit="app.Add()">   
+                    <div class="form-group">
+                        <label for="add-roll" class="col-sm-2 control-label">ID</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="add-roll" class="form-control" placeholder="Roll Number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-name" class="col-sm-2 control-label">NAME</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="add-name" class="form-control" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-stream" class="col-sm-2 control-label">STREAM</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="add-stream" class="form-control" placeholder="Stream">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-year" class="col-sm-2 control-label">PASSOUT YEAR</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="add-year" class="form-control" placeholder="Passout Year">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-sm-1">
+                            <input type="submit" value="Add" id="save_button" class="btn btn-success">
+                        </div>
+                        <div class="col-lg-offset-2 col-sm-1">
+                            <input type="button" value="Delete Multiple Rows" onclick="deleteMultipleRows()" class="btn btn-success">
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+            <!-- Data Edit Form -->
+            <div id="spoiler" role="aria-hidden" class="container-fluid">
+                <form action="javascript:void(0);" class="form-horizontal" method="POST" id="saveEdit">
+                    <div class="row">
+                        <div class="col-sm-2">    
+                        </div>
+                        <div class="col-sm-2" id="edit-lavender">
+                            <input type="text" id="edit-roll" class="form-control">
+                        </div>
+                        <div class="col-sm-2" id="edit-lavenderblush">
+                            <input type="text" id="edit-name" class="form-control">
+                        </div>   
+                        <div class="col-sm-2" id="edit-lavender">
+                            <input type="text" id="edit-stream" class="form-control">
+                        </div> 
+                        <div class="col-sm-2" id="edit-lavenderblush">
+                            <input type="text" id="edit-year" class="form-control">
+                        </div> 
+                        <div class="col-lg-offset-0 col-sm-0">
+                            <input type="submit" value="Edit" class="btn btn-primary"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+            <p id="counter"></p>
+    
+            <!-- Table Listing Data -->
+            <div class="container">
+                <table id="tableList" class="table table-bordered">
+                    <tr>
+                        <thead>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>STREAM</th>
+                        <th>YEAR</th>
+                        <th>EDIT/DELETE</th>
+                        <th>CHECKBOX</th>
+                        </thead>
+                    </tr>
+                    <tbody id="names"></tbody>
+                </table>
+            </div>
+    
+            <!-- Footer -->
+            <div id="bottom">
+                <div class ="container">
+                    <p class="text-muted credit">Coded By: Anureet Kaur</p>
+                </div>
+            </div>
+
+            <!-- Link to the javascript file -->
+            <script src="javascript.js"></script>
+        </body>
+    </html>
