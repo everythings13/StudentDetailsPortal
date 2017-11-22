@@ -1,4 +1,4 @@
-# StudentDetailsPortal that does the following tasks:
+# Student Details Management Portal that does the following tasks:
 
 1) Displays the list of students having name, roll number, passout year and stream as the fields.
 2) Adds new student details not following persistency, i.e once the page gets refreshed, initial details are shown again.
